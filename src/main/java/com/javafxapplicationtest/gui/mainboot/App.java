@@ -14,8 +14,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        
-        var scene = new Scene(loadFxml("dumbass"), 640, 480);
+        var scene = new Scene(loadFxml("MainApplicationFile"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }
