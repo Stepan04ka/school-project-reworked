@@ -10,7 +10,7 @@ public class DatabaseConnection {
     private Connection connection;
 	private Statement statement;
 
-	public void openConnetion() throws Exception {
+	public void openConnection() throws Exception {	
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testingdb","root","12345");
@@ -26,6 +26,14 @@ public class DatabaseConnection {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public Connection getConnection() {
+		return this.connection;
+	}
+
+	public Statement getStatement() {
+		return this.statement;
 	}
 
 	public void makeQuery(String sql) {
